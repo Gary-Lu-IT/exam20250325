@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using ExamWebAPI.Models.DB;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.SqlClient;
+using ExamWebAPI.Models.APISide;
 
 namespace ExamWebAPI.Controllers
 {
@@ -96,6 +97,64 @@ namespace ExamWebAPI.Controllers
                     db.SaveChanges();
                 }
                 return Ok("修改成功");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        /// <summary>取得</summary>
+        /// <param name="ACPD"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("api/exam/getcspd")]
+        public IActionResult GetCSPD([FromBody] GetACPDParam Param)
+        {
+            try
+            {
+                using (var db = new testContext())
+                {
+                    MyOffice_ACPD? OldACPD = db.MyOffice_ACPD.Where(x => x.ACPD_SID == Param.SID).FirstOrDefault();
+                    if (OldACPD == null)
+                    {
+                        return NotFound(Param.SID);
+                    }
+                    else
+                    {
+                        return Ok(OldACPD);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        /// <summary>刪除</summary>
+        /// <param name="ACPD"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("api/exam/delcspd")]
+        public IActionResult DelCSPD([FromBody] GetACPDParam Param)
+        {
+            try
+            {
+                using (var db = new testContext())
+                {
+                    MyOffice_ACPD? OldACPD = db.MyOffice_ACPD.Where(x => x.ACPD_SID == Param.SID).FirstOrDefault();
+                    if (OldACPD == null)
+                    {
+                        return NotFound(Param.SID);
+                    }
+                    else
+                    {
+                        db.MyOffice_ACPD.Remove(OldACPD);
+                        db.SaveChanges();
+                        return Ok("刪除成功");
+                    }
+                }
             }
             catch (Exception ex)
             {
