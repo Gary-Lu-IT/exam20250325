@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35913.81 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamWebAPI", "ExamWebAPI\ExamWebAPI.csproj", "{162482AF-1C33-49D7-9CCC-CFB62716C1E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamWebAPI", "ExamWebAPI\ExamWebAPI.csproj", "{757857B6-5936-4CE1-9CB6-3E24F0D9E86D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{162482AF-1C33-49D7-9CCC-CFB62716C1E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{162482AF-1C33-49D7-9CCC-CFB62716C1E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{162482AF-1C33-49D7-9CCC-CFB62716C1E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{162482AF-1C33-49D7-9CCC-CFB62716C1E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{757857B6-5936-4CE1-9CB6-3E24F0D9E86D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{757857B6-5936-4CE1-9CB6-3E24F0D9E86D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{757857B6-5936-4CE1-9CB6-3E24F0D9E86D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{757857B6-5936-4CE1-9CB6-3E24F0D9E86D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
